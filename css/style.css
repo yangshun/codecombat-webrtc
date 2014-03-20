@@ -1,0 +1,155 @@
+html, body {
+    background-color: #2f261d;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-image: url('../img/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+hr {
+    margin-bottom: 10px;
+}
+
+.limbo {
+    display: none;
+}
+
+.webrtc-widget {
+    background-color: transparent;
+    background-image: url('../img/crystal-ball.png');
+    background-size: 100px 120px;
+    height: 120px;
+    cursor: move;
+    position: absolute;
+    width: 100px;
+    top: 150px;
+    right: 150px;
+}
+
+.webrtc-widget:hover {
+    background-image: url('../img/crystal-ball-glow.png');
+}
+
+.webrtc-widget.active {
+    cursor: default;
+}
+
+.webrtc-widget.active,
+.webrtc-widget.active:hover {
+    background-image: none;
+}
+
+.webrtc-widget .webrtc-chat-container {
+    background-color: rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+    color: #fff;
+    display: none;
+    height: 400px;
+    margin-left: -100px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 10px;
+    position: absolute;
+    width: 300px;
+
+}
+
+.webrtc-widget.active .webrtc-chat-container {
+    display: initial;
+}
+
+.webrtc-widget .webrtc-chat-container .close-btn {
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    height: 30px;
+    position: absolute;
+    right: 5px;
+    text-align: right;
+    top: 5px;
+    width: 30px;
+}
+
+.webrtc-widget .title {
+    color: #f6bb42;
+    font-family: 'Bangers', cursive;
+    font-size: 24px;
+    margin-top: 5px;
+}
+
+.webrtc-widget .webrtc-chat-container .close:hover i {
+    color: #e1c987;;
+}
+
+.webrtc-widget .webrtc-chat-container .peer-id {
+    color: #e1c987;
+    font-size: 16px;
+}
+
+.webrtc-widget .webrtc-chat-container.connected .peer-details-container{
+    display: none;
+}
+
+.webrtc-widget .webrtc-chat-container .peer-details-container p {
+    margin-top: 0;
+}
+
+.webrtc-widget .webrtc-chat-container .peer-details-container .peer-id-container {
+    margin-bottom: 10px;
+}
+
+.webrtc-widget .webrtc-chat-container .peer-details-container h4 {
+    font-family: 'Bangers', cursive;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.webrtc-widget .webrtc-chat-container .peer-details-container .peer-id-copy {
+    color: #f6bb42;
+}
+
+.webrtc-widget .webrtc-chat-container.chatting .peer-details-container {
+    display: none;
+}
+
+.webrtc-widget .webrtc-chat-container.matchmake .peer-chat-container,
+.webrtc-widget .webrtc-chat-container.matchmake .peer-chat-input {
+    display: none;
+}
+
+.webrtc-widget .webrtc-chat-container .peer-chat-container {
+    display: initial;
+}
+
+.webrtc-widget .webrtc-chat-container .peer-chat-container .video-box {
+    background-color: black;
+    display: block;
+    height: 140px;
+    margin: 0 auto;
+}
+
+.webrtc-widget .webrtc-chat-container .peer-chat-container .chat-messages {
+    height: 130px;
+    margin-top: 5px;
+    overflow-y: scroll;
+    padding: 5px;
+}
+
+.webrtc-widget .webrtc-chat-container .peer-chat-container .chat-messages .sender {
+    color: #e1c987;
+    font-weight: bold;
+}
+
+.webrtc-widget .webrtc-chat-container .peer-chat-input {
+    bottom: 0;
+    margin-bottom: 10px;
+    position: absolute;
+}

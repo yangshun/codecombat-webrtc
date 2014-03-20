@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CodeCombat WebRTC Demo</title>
+  <link href='//fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootflat.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+
+<body>
+  <div class="webrtc-widget">
+    <div class="webrtc-chat-container matchmake">
+      <div class="close-btn">
+        <i class="fa fa-times"></i>
+      </div>
+      <h2 class="title">Crystal Ball</h2>
+      <hr/>
+      
+      <div class="peer-details-container">
+        <p>Input your friend's peer ID into the box below and press the 'Start' button!</p>
+        <hr/>
+        <div class="peer-id-container">
+          <h4>My Peer ID:</h4>
+          <p class="peer-id" id="my-peer-id"></p>
+        </div>
+        <div>
+          <h4>Enter friend's Peer ID:</h4>
+          <div class="input-group form-search">
+            <input class="form-control search-query" placeholder="Friend's Peer ID" type="text" id="other-peer-id">
+            <span class="input-group-btn">
+              <button class="btn btn-warning" data-type="last" onclick="start()">Start</button>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="peer-chat-container">
+        <video class="video-box" autoplay>
+        </video>
+        <div class="chat-messages" id="chats">
+
+        </div>
+      </div>
+
+      <div class="input-group form-search peer-chat-input">
+        <input class="form-control search-query" type="text" id="chat-msg" placeholder="Your Chat Message">
+        <span class="input-group-btn">
+          <button class="btn btn-warning" data-type="last" onclick="send()">Send</button>
+        </span>
+      </div>
+
+      <div class="limbo" id="limbo"></div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="js/jquery-2.0.3.min.js"></script>
+  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <script src="js/adapter.js"></script>
+  <script src="js/peer.js"></script>
+  <script src="js/app.js"></script>
+  
+</body>
+</html>
